@@ -6,3 +6,9 @@ Content-Type: application/json
   "username": "johndoe",
   "password": "password"
 }
+
+### Send login request (urlencoded)
+# POST http://localhost:5000/login
+# Content-Type: application/x-www-form-urlencoded
+
+# username=johndoe&password=password
