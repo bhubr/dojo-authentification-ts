@@ -1,0 +1,27 @@
+### Send login request
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "password": "password"
+}
+
+### Send request to protected endpoint
+GET http://localhost:5000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJhYmNkMDAwIiwiZW1haWwiOiJqb2huZG9lQHRvdG8ubmV0IiwidXNlcm5hbWUiOiJqb2huZG9lIiwiaWF0IjoxNjQ1MjAxODMwLCJleHAiOjE2NDUyMDU0MzB9.HQwM7TBOJryYVgLOzSgIse_clMQCUXEQHkVXlLSR2V4
+
+### Send request to protected endpoint
+// axios.get('/protected-url', { headers: {
+//   authorization: `Bearer ${token}` 
+// } })
+GET /protected-url
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJhYmNkMDAwIiwiZW1haWwiOiJqb2huZG9lQHRvdG8ubmV0IiwidXNlcm5hbWUiOiJqb2huZG9lIiwiaWF0IjoxNjQ1MTk4MTY1LCJleHAiOjE2NDUyMDE3NjV9.5NbY0-8vRggh2rRjy4KxuLAs7Vsh9fKmklgNxyqql3E
+
+
+
+### Send login request (urlencoded)
+# POST http://localhost:5000/login
+# Content-Type: application/x-www-form-urlencoded
+
+# username=johndoe&password=password
